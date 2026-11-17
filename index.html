@@ -12,7 +12,7 @@
 
 <h1 style="color:#0f2027; margin-bottom:5px;">Cyril Tech</h1>
 <p style="color:#555; margin-top:0;">Hi, I'm Cyril — I fix laptops for FULokoja students and other people</p>
-<p style="background:#e8f5e9; color:#1b5e20; padding:8px; border-radius:10px; font-weight:bold;">Fast • Affordable • And • Trusted </p>
+<p style="background:#e8f5e9; color:#1b5e20; padding:8px; border-radius:10px; font-weight:bold;">Fast • Affordable • Trusted in Lokoja</p>
 
 <h2 style="color:#0f2027; border-bottom:2px solid #2c5364; display:inline-block;">What I Do</h2>
 <p style="text-align:left; line-height:1.8; background:#f5f7fa; padding:15px; border-radius:12px;">
@@ -36,16 +36,46 @@
 </div>
 <p style="font-size:13px; color:#777;"><i>Note: For replacement, parts price is separate.</i></p>
 
-<h2 style="color:#0f2027;">Contact Me</h2>
+<h2 style="color:#0f2027;">Tell Me Your Problem</h2>
+<p style="color:#555; font-size:14px;">Fill this form, it will send to me on WhatsApp</p>
+
+<form onsubmit="sendWhatsApp(event)" style="text-align:left; background:#f5f7fa; padding:15px; border-radius:12px;">
+<label><b>Your Name</b></label><br>
+<input id="name" type="text" placeholder="e.g. Musa" required style="width:100%; padding:10px; margin:5px 0 12px 0; border-radius:8px; border:1px solid #ccc;"><br>
+
+<label><b>What is wrong with your laptop?</b></label><br>
+<select id="problem" style="width:100%; padding:10px; margin:5px 0 12px 0; border-radius:8px; border:1px solid #ccc;">
+<option>Windows Installation</option>
+<option>Software Installation</option>
+<option>Laptop Servicing / Repairing</option>
+<option>Cartridge Refilling</option>
+<option>Printer Servicing</option>
+<option>Keyboard / Battery / Screen Replacement</option>
+<option>Other Problem</option>
+</select><br>
+
+<label><b>Explain your problem</b></label><br>
+<textarea id="details" placeholder="e.g. My laptop is slow, battery is swelling..." style="width:100%; padding:10px; margin:5px 0 12px 0; border-radius:8px; border:1px solid #ccc; height:70px;"></textarea><br>
+
+<button type="submit" style="background:#25D366; color:white; padding:14px; width:100%; border:none; border-radius:30px; font-weight:bold; font-size:16px;">Send To Cyril On WhatsApp</button>
+</form>
+
+<script>
+function sendWhatsApp(e){
+e.preventDefault();
+var name = document.getElementById('name').value;
+var problem = document.getElementById('problem').value;
+var details = document.getElementById('details').value;
+var msg = "Hello Cyril, my name is " + name + ". My problem is: " + problem + ". Details: " + details;
+window.open("https://wa.me/2348122003657?text=" + encodeURIComponent(msg), "_blank");
+}
+</script>
+
 <p>📍 Lokoja, Kogi State<br>📱 WhatsApp: 08122003657</p>
-
-<p><a href="https://wa.me/2348122003657" style="background:#25D366; color:white; padding:14px 25px; text-decoration:none; border-radius:30px; font-weight:bold; display:inline-block;">Chat Me On WhatsApp</a></p>
-
-<p style="font-weight:bold; color:#0f2027;">Message me now for fast repair!</p>
 
 </div>
 
 <p style="font-size:12px; color:#ccc; margin-top:15px;">© 2026 Cyril Tech • Lokoja</p>
 
 </body>
-                                                                                       </html>
+  </html>
