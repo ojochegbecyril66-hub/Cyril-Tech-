@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cyril Tech - Laptop Repair & Websites</title>
+<style>
+body { font-family: Arial; background: #f2f2f2; padding: 20px; margin: 0; }
+.box { background: white; padding: 20px; border-radius: 12px; max-width: 500px; margin: auto; }
+h1 { color: #0a7a42; text-align: center; margin-bottom: 5px; }
+.subtitle { text-align: center; color: #555; }
+input, select, textarea { width: 100%; padding: 12px; margin: 8px 0; border: 1px solid #ccc; border-radius: 8px; box-sizing: border-box; }
+button { width: 100%; padding: 14px; background: #0a7a42; color: white; border: none; border-radius: 8px; font-size: 16px; font-weight: bold; }
+</style>
+</head>
+<body>
+
+<div class="box">
+<h1>Cyril Tech</h1>
+<p class="subtitle">FULokoja Student | Laptop Repair | Windows Installation | Printer Repair | Websites</p>
+
+<h2>My Services</h2>
+<p>✅ Windows Installation - ₦7,000</p>
+<p>✅ Laptop Repair & Servicing - ₦10,000</p>
+<p>✅ Printer Repair - ₦5,000</p>
+<p>✅ Simple Website - ₦25,000</p>
+
+<h2>Place Your Problem Here</h2>
+<p>Tell me what is wrong with your laptop. I will reply you on WhatsApp.</p>
+
+<form onsubmit="sendToWhatsApp(event)">
+<label>Your Name</label>
+<input type="text" id="name" placeholder="e.g. Emmanuel" required>
+
+<label>Your WhatsApp Number</label>
+<input type="text" id="phone" placeholder="e.g. 0803..." required>
+
+<label>What is the Problem?</label>
+<select id="problem">
+<option>Laptop is slow</option>
+<option>Windows not working / Need Windows Installation</option>
+<option>Laptop not coming on</option>
+<option>Printer Problem</option>
+<option>I Need a Website</option>
+<option>Other Problem</option>
+</select>
+
+<label>Explain Small</label>
+<textarea id="details" rows="4" placeholder="E.g. My laptop shows blue screen since yesterday"></textarea>
+
+<button type="submit">Send My Problem to Cyril Tech</button>
+</form>
+
+<p style="text-align:center; font-size:13px;">Your details go straight to my WhatsApp. I reply fast.</p>
+<p style="text-align:center; font-size:13px; color:#0a7a42;"><b>Cyril Tech - 0812 200 3657</b></p>
+</div>
+
+<script>
+function sendToWhatsApp(event) {
+  event.preventDefault();
+  var name = document.getElementById('name').value;
+  var phone = document.getElementById('phone').value;
+  var problem = document.getElementById('problem').value;
+  var details = document.getElementById('details').value;
+  var message = "Hello Cyril Tech, I'm " + name + ". My number is " + phone + ". My problem: " + problem + ". Details: " + details;
+  var url = "https://wa.me/2348122003657?text=" + encodeURIComponent(message);
+  window.location.href = url;
+}
+</script>
+
+</body>
+</html>
