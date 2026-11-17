@@ -43,6 +43,9 @@
 <label><b>Your Name</b></label><br>
 <input id="name" type="text" placeholder="e.g. Musa" required style="width:100%; padding:10px; margin:5px 0 12px 0; border-radius:8px; border:1px solid #ccc;"><br>
 
+<label><b>Your Phone Number</b></label><br>
+<input id="phone" type="tel" placeholder="e.g. 0803..." required style="width:100%; padding:10px; margin:5px 0 12px 0; border-radius:8px; border:1px solid #ccc;"><br>
+
 <label><b>What is wrong with your laptop?</b></label><br>
 <select id="problem" style="width:100%; padding:10px; margin:5px 0 12px 0; border-radius:8px; border:1px solid #ccc;">
 <option>Windows Installation</option>
@@ -64,9 +67,10 @@
 function sendWhatsApp(e){
 e.preventDefault();
 var name = document.getElementById('name').value;
+var phone = document.getElementById('phone').value;
 var problem = document.getElementById('problem').value;
 var details = document.getElementById('details').value;
-var msg = "Hello Cyril, my name is " + name + ". My problem is: " + problem + ". Details: " + details;
+var msg = "Hello Cyril, my name is " + name + ". My phone number is " + phone + ". My problem is: " + problem + ". Details: " + details;
 window.open("https://wa.me/2348122003657?text=" + encodeURIComponent(msg), "_blank");
 }
 </script>
